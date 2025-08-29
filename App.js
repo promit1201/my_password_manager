@@ -1,15 +1,21 @@
-import React from 'react';
-import { StoreProvider } from './src/context/StoreProvider';
-import useMerriweather from './src/hooks/useMerriweather';
-import AppNavigator from './src/navigation/AppNavigator';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "./src/navigation/AppNavigator";
+import useMerriweather from "./src/hooks/useMerriweather";
+import { StoreProvider } from "./src/context/StoreProvider";
+import { LightTheme, DarkTheme } from "./src/theme/colors";
+import { useColorScheme } from "react-native";
 
 export default function App() {
-  const ready = useMerriweather();
-  if (!ready) return null;
+  const fontsReady = useMerriweather();
+  const scheme = useColorScheme();
+  if (!fontsReady) return null;
 
   return (
     <StoreProvider>
-      <AppNavigator />
+      <NavigationContainer theme={scheme === "dark" ? DarkTheme : LightTheme}>
+        <AppNavigator />
+      </NavigationContainer>
     </StoreProvider>
   );
 }

@@ -1,7 +1,7 @@
-import { useStore } from '../context/StoreProvider';
-import { Light, Dark } from '../theme/colors';
+import { useColorScheme } from "react-native";
+import { LightTheme, DarkTheme } from "../theme/colors";
 
 export default function useThemeColors() {
-  const { themeMode } = useStore();
-  return themeMode === 'dark' ? Dark.colors : Light.colors;
+  const scheme = useColorScheme();
+  return scheme === "dark" ? DarkTheme.colors : LightTheme.colors;
 }

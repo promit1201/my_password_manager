@@ -2,6 +2,39 @@
   "expo": {
     "name": "promitsproject",
     "slug": "promitsproject",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon-red-eagle.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon-red-eagle.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-red-eagle.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/icon-red-eagle.png"
+    },
+    "extra": {
+      "EXPO_PUBLIC_SUPABASE_URL": "https://oafmvcbetnccbrzdbjiv.supabase.co",
+      "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9hZm12Y2JldG5jY2JyemRiaml2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjgwMTAsImV4cCI6MjA3MDk0NDAxMH0.e2s4wU-RzlhK2hC5COELVBhgHzri0Ug6S4Qn5kzh5mw"
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
